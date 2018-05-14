@@ -18,7 +18,6 @@ public final class TicTacToe {
     private int turn=1, who=1;
     private Player player1;
     private Player player2;
-    private int [] attempt;
     public Scanner input = new Scanner(System.in);
 
     
@@ -26,9 +25,6 @@ public final class TicTacToe {
         board = new Board();
         startPlayers();
         
-        while( play() ){
-            
-        }
     }
     
     public void startPlayers(){
@@ -120,6 +116,10 @@ public final class TicTacToe {
     
     public static void main(String args[]) {
         TicTacToe ticTacToe = new TicTacToe();
+        
+        while( ticTacToe.play()){
+            
+        }
         
     }
 }

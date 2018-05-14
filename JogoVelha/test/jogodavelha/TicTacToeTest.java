@@ -5,7 +5,6 @@
  */
 package jogodavelha;
 
-import jogodavelha.TicTacToe;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -17,7 +16,6 @@ import static org.junit.Assert.*;
 public class TicTacToeTest {
 
     private Board board;
-    private TicTacToe jogo;
     @Before
     public void setUp() {
         board = new Board();
