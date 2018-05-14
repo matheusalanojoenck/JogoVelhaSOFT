@@ -16,16 +16,16 @@ import static org.junit.Assert.*;
  */
 public class TicTacToeTest {
 
-    private TicTacToe ticTacToe = new TicTacToe();
-    
+    private Board board;
+    private TicTacToe jogo;
     @Before
     public void setUp() {
+        board = new Board();
+        board.jogoTeste();
     }
     
     @Test
     public void rotinaUmTeste(){
-        
+        assertEquals(-1, board.won());
     }
-    
-    
 }
