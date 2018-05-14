@@ -1,3 +1,5 @@
+package JogoVelha;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -20,14 +22,10 @@ public abstract class Player {
     
     public abstract void play(Board board);
     
-    public abstract void Try(Board board);
+    public abstract void tentativa(Board board);
 
     public boolean checkTry(int[] attempt, Board board){
-        if(board.getPosition(attempt) == 0)
-            return true;
-        else
-            return false;
-            
+        return board.getPosition(attempt) == 0;  
     }
     
 }

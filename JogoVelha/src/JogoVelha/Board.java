@@ -1,3 +1,5 @@
+package JogoVelha;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,10 +10,11 @@
  *
  * @author Administrador
  */
-public class Board {
-    private int[][] Board= new int[3][3];
+public final class Board {
+    private final int[][] Board;
     
     public Board(){
+        this.Board = new int[3][3];
         clearBoard();
     }
     

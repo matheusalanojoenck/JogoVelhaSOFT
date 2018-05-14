@@ -1,3 +1,5 @@
+package JogoVelha;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,8 +13,8 @@
  */
 import java.util.Scanner;
 
-public class TicTacToe {
-    private Board board;
+public final class TicTacToe {
+    private final Board board;
     private int turn=1, who=1;
     private Player player1;
     private Player player2;
@@ -24,7 +26,9 @@ public class TicTacToe {
         board = new Board();
         startPlayers();
         
-        while( Play() );
+        while( play() ){
+            
+        }
     }
     
     public void startPlayers(){
@@ -59,7 +63,7 @@ public class TicTacToe {
         return option;
     }
     
-    public boolean Play(){
+    public boolean play(){
         board.showBoard();
         if(won() == 0 ){
             System.out.println("----------------------");
@@ -80,17 +84,13 @@ public class TicTacToe {
             turn++;
 
             return true;
-        }if(draw()){
-            System.out.println("Draw");
-            return false;
         } else{
             if(won() == -1 )
                 System.out.println("Player 1 won!");
             else
                 System.out.println("Player 2 won!");
             return false;
-        }
-            
+        }            
     }
     
     public int who(){
@@ -118,18 +118,8 @@ public class TicTacToe {
         return 0;
     }
     
-    private boolean draw(){
-        if(turn<5){
-            return false;
-        }else {
-            if(player1.checkTry(attempt, board)){
-                
-            }
-        }
-        return false;
-    }
-    
     public static void main(String args[]) {
-        new TicTacToe();
+        TicTacToe ticTacToe = new TicTacToe();
+        
     }
 }

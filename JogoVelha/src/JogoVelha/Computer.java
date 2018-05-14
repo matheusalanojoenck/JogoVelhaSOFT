@@ -1,5 +1,5 @@
+package JogoVelha;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 /*
@@ -13,23 +13,24 @@ import java.util.Random;
  * @author Administrador
  */
 public class Computer extends Player{
-    private Random RANDOM = new Random();
-    int [][]  possition = new int[2][2];
+    private final Random RANDOM = new Random();
+    private final int [][]  possition;
     
     public Computer(int player){
         super(player);
+        this.possition = new int[2][2];
         this.player = player;
         System.out.println("Player 'Computer' created");
     }
     
     @Override
     public void play(Board board){
-        Try(board);
+        tentativa(board);
         board.setPosition(attempt, player);
     }
     
     @Override
-    public void Try(Board board){
+    public void tentativa(Board board){
         do{
             do{
                 System.out.print("Line: ");
