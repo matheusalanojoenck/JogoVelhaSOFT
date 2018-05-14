@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package JogoVelha;
+package jogodavelha;
 
+import jogodavelha.TicTacToe;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -15,7 +16,7 @@ import static org.junit.Assert.*;
  */
 public class TicTacToeTest {
 
-    TicTacToe ticTacToe = new TicTacToe();
+    private TicTacToe ticTacToe = new TicTacToe();
     
     @Before
     public void setUp() {

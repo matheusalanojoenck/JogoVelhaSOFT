@@ -1,4 +1,4 @@
-package JogoVelha;
+package jogodavelha;
 
 import java.util.Random;
 
@@ -14,11 +14,9 @@ import java.util.Random;
  */
 public class Computer extends Player{
     private final Random RANDOM = new Random();
-    private final int [][]  possition;
     
     public Computer(int player){
         super(player);
-        this.possition = new int[2][2];
         this.player = player;
         System.out.println("Player 'Computer' created");
     }
