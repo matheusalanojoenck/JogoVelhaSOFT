@@ -16,6 +16,7 @@ import static org.junit.Assert.*;
 public class TicTacToeTest {
 
     private Board board;
+
     @Before
     public void setUp() {
         board = new Board();
